@@ -5,10 +5,32 @@ import { menu } from "@/lib/menu-data";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Menu — Punjab Foods" },
+      { title: "Menu — Punjab Foods Pulao, Roast & Kabab" },
       { name: "description", content: "Full menu: Chicken Pulao, Channa Pulao, Chicken Roast, Shami Kabab, Zarda and more. Prices in PKR." },
       { property: "og:title", content: "Menu — Punjab Foods" },
       { property: "og:description", content: "Pulao, Roast, Kabab, Zarda — complete price list." },
+      { property: "og:url", content: "https://punjabfood.lovable.app/menu" },
+    ],
+    links: [{ rel: "canonical", href: "https://punjabfood.lovable.app/menu" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Menu",
+          name: "Punjab Foods Menu",
+          hasMenuSection: menu.map((section) => ({
+            "@type": "MenuSection",
+            name: section.title,
+            hasMenuItem: section.items.map((it) => ({
+              "@type": "MenuItem",
+              name: it.name,
+              description: it.desc,
+              offers: { "@type": "Offer", price: it.price, priceCurrency: "PKR" },
+            })),
+          })),
+        }),
+      },
     ],
   }),
   component: MenuPage,
