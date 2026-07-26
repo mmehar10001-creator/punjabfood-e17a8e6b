@@ -14,6 +14,29 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Punjab Foods serves authentic Chicken Pulao, Roast, Kabab and full catering Deg menu in Rawalpindi. Home delivery available." },
       { property: "og:title", content: "Punjab Foods — Pulao & Kabab" },
       { property: "og:description", content: "Authentic Pulao, Roast & Kabab in Rawalpindi. Order or book catering Degs." },
+      { property: "og:url", content: "https://punjabfood.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://punjabfood.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          name: "Punjab Foods",
+          description: "Authentic Pulao, Roast, Kabab and catering Degs in Rawalpindi.",
+          servesCuisine: ["Pakistani", "Punjabi"],
+          priceRange: "$$",
+          telephone: "+92-51-5706222",
+          url: "https://punjabfood.lovable.app/",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Sirsyed Chowk, Tipu Road",
+            addressLocality: "Rawalpindi",
+            addressCountry: "PK",
+          },
+        }),
+      },
     ],
   }),
   component: Index,
@@ -35,7 +58,7 @@ function Index() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-5 sm:px-6">
           <p className="text-[10px] sm:text-xs tracking-[0.35em] sm:tracking-[0.4em] uppercase text-primary mb-5 sm:mb-6">Rawalpindi · Since Years</p>
           <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl text-foreground max-w-4xl leading-[1.05]">
-            Punjab Foods
+            Punjab Foods — Authentic Pulao & Kabab in Rawalpindi
           </h1>
           <p className="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-foreground/80 font-serif italic">
             Pulao · Kabab · Roast · Deg
