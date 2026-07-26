@@ -8,9 +8,11 @@ export const Route = createFileRoute("/catering")({
     meta: [
       { title: "Catering & Deg Menu — Punjab Foods" },
       { name: "description", content: "Order Pulao, Biryani, Qorma and Zarda Degs for weddings and events. Sada Pulao Deg from Rs. 10,000." },
-      { property: "og:title", content: "Catering & Deg — Punjab Foods" },
+      { property: "og:title", content: "Catering & Deg Menu — Punjab Foods" },
       { property: "og:description", content: "Full Deg menu for shadi, gham and events. One call away." },
+      { property: "og:url", content: "https://punjabfood.lovable.app/catering" },
     ],
+    links: [{ rel: "canonical", href: "https://punjabfood.lovable.app/catering" }],
   }),
   component: CateringPage,
 });
@@ -23,7 +25,7 @@ function CateringPage() {
         <div className="absolute inset-0 bg-background/60" />
         <div className="relative z-10 text-center max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.35em] sm:tracking-[0.4em] uppercase text-primary mb-4">Catering Service</p>
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl">Deg Menu</h1>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl">Catering & Deg Menu</h1>
           <p className="mt-5 sm:mt-6 text-muted-foreground text-base sm:text-lg">
             Shadi, gham, aur har taqreeb par parcel aap ke paas — ek phone call par.
           </p>

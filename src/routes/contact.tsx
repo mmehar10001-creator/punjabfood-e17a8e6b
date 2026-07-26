@@ -5,10 +5,30 @@ import { contact } from "@/lib/menu-data";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Punjab Foods" },
+      { title: "Contact Punjab Foods — Home Delivery, Rawalpindi" },
       { name: "description", content: "Call Punjab Foods at 051-5706222 for home delivery in Rawalpindi. Visit us at Sirsyed Chowk, Tipu Road." },
-      { property: "og:title", content: "Contact — Punjab Foods" },
+      { property: "og:title", content: "Contact Punjab Foods" },
       { property: "og:description", content: "Home delivery & location details for Punjab Foods, Rawalpindi." },
+      { property: "og:url", content: "https://punjabfood.lovable.app/contact" },
+    ],
+    links: [{ rel: "canonical", href: "https://punjabfood.lovable.app/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Punjab Foods",
+          telephone: "+92-51-5706222",
+          url: "https://punjabfood.lovable.app/contact",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Sirsyed Chowk, Tipu Road",
+            addressLocality: "Rawalpindi",
+            addressCountry: "PK",
+          },
+        }),
+      },
     ],
   }),
   component: Contact,

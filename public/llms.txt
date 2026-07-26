@@ -1,0 +1,13 @@
+# Punjab Foods
+
+> Authentic Pulao, Roast, Kabab and catering Deg service in Rawalpindi, Pakistan. Home delivery and event catering available.
+
+Punjab Foods is a family-run restaurant at Sirsyed Chowk, Tipu Road, Rawalpindi, specializing in traditional Punjabi cuisine — Chicken Pulao, Chicken Roast, Shami Kabab, Zarda — served à la carte and as bulk Degs for weddings and events.
+
+## Pages
+
+- [Home](/): Overview of Punjab Foods, signature dishes and catering.
+- [Menu](/menu): À la carte menu with Pulao, Roast, Kabab, Zarda and sides with prices in PKR.
+- [Catering](/catering): Deg menu for weddings, gham and events with bulk pricing.
+- [About](/about): Story of Punjab Foods and cooking tradition.
+- [Contact](/contact): Phone, WhatsApp, address and map for home delivery and bookings.

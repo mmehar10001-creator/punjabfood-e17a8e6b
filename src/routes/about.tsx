@@ -5,11 +5,13 @@ import kabab from "@/assets/kabab.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Punjab Foods" },
+      { title: "About Punjab Foods — Our Story" },
       { name: "description", content: "Punjab Foods — authentic Pulao and Kabab restaurant in Rawalpindi, serving traditional Punjabi cuisine." },
-      { property: "og:title", content: "About — Punjab Foods" },
+      { property: "og:title", content: "About Punjab Foods" },
       { property: "og:description", content: "Traditional Punjabi cuisine, served from the heart of Rawalpindi." },
+      { property: "og:url", content: "https://punjabfood.lovable.app/about" },
     ],
+    links: [{ rel: "canonical", href: "https://punjabfood.lovable.app/about" }],
   }),
   component: About,
 });
@@ -21,7 +23,7 @@ function About() {
         <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">About Us</p>
-            <h1 className="font-serif text-5xl md:text-6xl mb-8">Tradition on a plate.</h1>
+            <h1 className="font-serif text-5xl md:text-6xl mb-8">About Punjab Foods</h1>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
                 Punjab Foods is a family-run kitchen in Rawalpindi, born from a simple belief: that the best food
