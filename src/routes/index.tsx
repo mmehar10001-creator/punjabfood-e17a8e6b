@@ -16,7 +16,10 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Authentic Pulao, Roast & Kabab in Rawalpindi. Order or book catering Degs." },
       { property: "og:url", content: "https://punjabfood.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "https://punjabfood.lovable.app/" }],
+    links: [
+      { rel: "canonical", href: "https://punjabfood.lovable.app/" },
+      { rel: "preload", as: "image", href: hero, fetchpriority: "high" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -53,7 +56,7 @@ function Index() {
     <SiteLayout>
       {/* Hero */}
       <section className="relative min-h-[600px] h-screen w-full overflow-hidden">
-        <img src={hero} alt="Chicken Pulao" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={hero} alt="Chicken Pulao" width={1920} height={1080} fetchPriority="high" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-5 sm:px-6">
           <p className="text-[10px] sm:text-xs tracking-[0.35em] sm:tracking-[0.4em] uppercase text-primary mb-5 sm:mb-6">Rawalpindi · Since Years</p>
